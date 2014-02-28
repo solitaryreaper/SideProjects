@@ -28,6 +28,9 @@ def get_language_stats_from_page_html(html):
             
     return language_stats
 
+"""
+    Collect languages stats from all the github pages for this company
+"""
 def get_language_stats_by_company(github_base_url):
     page = 0
     overall_language_stats = {}
@@ -52,6 +55,9 @@ def get_language_stats_by_company(github_base_url):
         
     return overall_language_stats
     
+"""
+    Check if the github handle is a valid URL
+"""    
 def check_if_valid_url(company_url):
     is_valid_url = True
     try:
