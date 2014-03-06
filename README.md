@@ -25,7 +25,7 @@ Most Used Languages
 2) YOUTUBE DEAD LINK FIXER
 ==========================
 
-I just hate it when a song link in my youtube playlist is broken because the underlying video is deleted. Using youtube data API, this can be fixed. To make youtube playlist modifications, you need to call youtube API with apt keys (https://code.google.com/p/youtube-api-samples/source/browse/samples/python/playlist_updates.py). You need to add a client_secrets.json file which will have the secret keys that allows you to access your private content on youtube. Access to public entities can be done with the public key in my script. This script runs as follows :
+I just hate it when a song link in my youtube playlist is broken because the underlying video is deleted. Using youtube data API, this can be fixed. To make youtube playlist modifications, you need to call youtube API with apt keys (https://code.google.com/p/youtube-api-samples/source/browse/samples/python/playlist_updates.py). You need to add a client_secrets.json file (https://developers.google.com/api-client-library/python/guide/aaa_client_secrets) which will have the secret keys that allows you to access your private content on youtube. Access to public entities can be done with the public key in my script. This script runs as follows :
 
     python youtube_dead_link_fixer.py <playlist id to be fixed>
     Example : python youtube_dead_link_fixer.py PLAFB78EFDE5A6259A
