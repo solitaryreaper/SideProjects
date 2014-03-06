@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 #!/usr/bin/python
 
 '''
@@ -6,33 +7,74 @@ Created on Oct 16, 2013
 @author: excelsior
 '''
 
-import urllib2, json
+import urllib2, json, httplib2, os, json, sys
+
+from apiclient.discovery import build
+from oauth2client.file import Storage
+from oauth2client.client import flow_from_clientsecrets
+from oauth2client.tools import run
+
+CLIENT_SECRETS_FILE = "client_secrets.json"
+
+# Helpful message to display if the CLIENT_SECRETS_FILE is missing.
+MISSING_CLIENT_SECRETS_MESSAGE = """
+WARNING: Please configure OAuth 2.0
+
+To make this sample run you will need to populate the client_secrets.json file
+found at:
+
+   %s
+
+with information from the APIs Console
+https://code.google.com/apis/console#access
+
+For more information about the client_secrets.json file format, please visit:
+https://developers.google.com/api-client-library/python/guide/aaa_client_secrets
+""" % os.path.abspath(os.path.join(os.path.dirname(__file__), CLIENT_SECRETS_FILE))
+
+# An OAuth 2 access scope that allows for full read/write access.
+YOUTUBE_READ_WRITE_SCOPE = "https://www.googleapis.com/auth/youtube"
+YOUTUBE_API_SERVICE_NAME = "youtube"
+YOUTUBE_API_VERSION = "v3"
 
 # This is the simple key for accessing non-account specific youtube data
 SIMPLE_DEVELOPER_KEY = "AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs"
 YOUTUBE_SERVICE_BASE_URL = "https://www.googleapis.com/youtube/v3/"
 MAX_RESULTS = 50
 
+def output(text):
+    return text.encode('utf-8').strip()
+
+class PlayListSong(object):
+    
+    def __init__(self, name, playlist_item_id, video_id):
+        self.name = name
+        self.playlist_item_id = playlist_item_id
+        self.video_id = video_id
+        
+    def __str__(self):
+        return "Song : " + output(self.name) + ", Playlist Item Id : " + output(self.playlist_item_id) + ", Video Id : " + output(self.video_id)
+    
 def get_playlist_songs(playlist_id):
     """
         Returns all the songs corresponding to a playlist URL
     """
     api_call = YOUTUBE_SERVICE_BASE_URL + "playlistItems?part=snippet"
     api_call = api_call + "&maxResults=" + str(MAX_RESULTS) +"&playlistId=" + playlist_id + "&key=" + SIMPLE_DEVELOPER_KEY
-    #print "API Call for songs of a playlist :" + api_call
     
     songs_json = urllib2.urlopen(api_call)
     playlist_songs_obj = parse_json(songs_json)
-    print playlist_songs_obj
     
+    playlist_songs = []
     song_wrappers = playlist_songs_obj['items']
-    print "Number of songs in playlist :  " + str(len(song_wrappers))
     for song_wrapper in song_wrappers:
+        playlist_item_id = song_wrapper['id']
         song_name = song_wrapper['snippet']['title']
         song_id = song_wrapper['snippet']['resourceId']['videoId']
+
+        playlist_songs.append(PlayListSong(song_name, playlist_item_id, song_id))
         
-        is_song_active = is_song_url_active(song_id)
-        print "Title : " + song_name + ", Id : " + song_id + ", Active ? " + str(is_song_active)
+    return playlist_songs
 
 def get_my_playlists():
     """
@@ -63,25 +105,55 @@ def get_best_song_with_keywords(keywords):
     api_call = YOUTUBE_SERVICE_BASE_URL + "search?part=snippet&maxResults=1&q=" + keywords + "&key=" + SIMPLE_DEVELOPER_KEY
     print "API call for getting best song result is : " + api_call
 
-    best_search_result_json = urllib2.urlopen(api_call)
-    song_video_obj = parse_json(best_search_result_json)
-
-    content = song_video_obj['items']
-    song_video_id = content[0]['id']['videoId']
-
+    song_video_id = None
+    try:
+        best_search_result_json = urllib2.urlopen(api_call)
+        song_video_obj = parse_json(best_search_result_json)
+    
+        content = song_video_obj['items']
+        song_video_id = content[0]['id']['videoId']
+    except Exception, err:
+        print "Failed to search alternate song for keywords : " + keywords
+    
     return song_video_id
 
-def add_song_to_playlist(song_url, playlist_url):
+def add_song_to_playlist(youtube_obj, song_id, playlist_id):
     """
         Adds a new song to the playlist
     """
-    pass
+    is_song_added_to_playlist = True
+    try:
+        youtube_obj.playlistItems().insert(
+            part = "snippet",
+            body = 
+            {
+            'snippet': {
+              'playlistId': playlist_id, 
+              'resourceId': {
+                  'kind': 'youtube#video',
+                  'videoId': song_id
+                }
+              }
+             }    
+        ).execute()
+    except Exception, err:
+        is_song_added_to_playlist = False
+        print "Failed to add song " + output(song_id) + " to playlist " + output(playlist_id) + ". Reason : " + str(err)
+        
+    return is_song_added_to_playlist
 
-def remove_song_from_playlist(song_url, playlist_url):
+def remove_song_from_playlist(youtube_obj, playlist_song_id):
     """
         Removes a song from the playlist
     """
-    pass
+    is_song_deleted_from_playlist = True
+    try:
+        youtube_obj.playlistItems().delete(id=playlist_song_id).execute()
+    except Exception, err:
+        is_song_deleted_from_playlist = False
+        print "Failed to delete playlist song " + output(playlist_song_id) + ". Reason : " + str(err)
+        
+    return is_song_deleted_from_playlist
 
 def parse_json(json_string):
     """
@@ -93,24 +165,66 @@ def parse_json(json_string):
         
     return parsed_json_object
 
+def get_authenticated_service():
+    flow = flow_from_clientsecrets(CLIENT_SECRETS_FILE, scope=YOUTUBE_READ_WRITE_SCOPE,
+    message=MISSING_CLIENT_SECRETS_MESSAGE)
+
+    storage = Storage("%s-oauth2.json" % sys.argv[0])
+    credentials = storage.get()
+
+    if credentials is None or credentials.invalid:
+        credentials = run(flow, storage)
+
+    return build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION,
+        http=credentials.authorize(httplib2.Http()))
+    
+def get_search_keywords_for_song(song_name):
+    tokens = song_name.split(" ")
+    search_keywords = []
+    for token in tokens:
+        token = token.strip()
+        token = ''.join(c for c in token if c.isalnum())
+        if len(token) < 2:
+            continue
+        
+        search_keywords.append(token)
+
+    search_keywords_string = "+".join(token for token in search_keywords)
+    return search_keywords_string
+    
 if __name__ == '__main__':
-    # Get songs for my Jan-12 playlist. This has both dead as well as active links
-    # get_playlist_songs("PL4C8AA3EAAC856623")
+    if len(sys.argv) > 2:
+        print "Invalid arguments. Syntax : <script> <playlist_id>"
+        sys.exit()
+        
+    youtube_obj = get_authenticated_service()
+    playlist_id = sys.argv[1]
     
-    # A test playlist - PLSVmge2Vrmn21gsF-hIfu2ryDCyO7qFf2
-
-    keywords = "best+love+song"
-    best_song_id = get_best_song_with_keywords(keywords)
-    print "Song Id for keywords " + keywords + " is " + best_song_id
-
-
-    """
-    #Test if songs are valid/broken
-    valid_song_id = "PDBCg5qeSqs"
-    broken_song_id = "ziGR8ZCVHSA"
-    
-    print "Is song id " + valid_song_id + " active ? " + str(is_song_active(valid_song_id))
-    print "Is song id " + valid_song_id + " active ? " + str(is_song_active(broken_song_id))
-    """    
-    
-    
+    print "Listing songs for playlist : " + output(playlist_id)
+    playlist_songs = get_playlist_songs(playlist_id)
+    for playlist_song in playlist_songs:
+        print str(playlist_song)
+        
+        is_song_active = is_song_url_active(playlist_song.video_id)
+        if is_song_active:
+            print "Song " + output(playlist_song.name) + " is active .."
+        else:
+            print "Song " + output(playlist_song.name) + " is not active .."
+            
+            print "Deleting inactive song " + playlist_song.video_id + " from current playlist .."
+            is_song_deleted = remove_song_from_playlist(youtube_obj, playlist_song.playlist_item_id)
+            if is_song_deleted:
+                print "Successfully deleted inactive song : " + playlist_song.video_id + " from playlist .."
+                
+                search_keywords_string = get_search_keywords_for_song(playlist_song.name)
+                alt_song_video_id = get_best_song_with_keywords(search_keywords_string)
+                print "Adding alternate video for this song : " + output(alt_song_video_id)
+                if not alt_song_video_id:
+                    print "Failed to find alternate song for " + search_keywords_string
+                    continue
+                
+                is_song_added = add_song_to_playlist(youtube_obj, alt_song_video_id, playlist_id)
+                if is_song_added:
+                    print "Successfully added new song " + output(alt_song_video_id) + " to current playlist .."
+                else:
+                    print "Failed to add new song " + output(alt_song_video_id) + " to current playlist .."
