@@ -18,3 +18,12 @@ A collection of fun side-projects that I did along the way ..
   C++ 2.27 % 
   Clojure 2.27 % 
   Ruby 2.27 % 
+
+
+2) Youtube Dead Link Fixer :
+
+I just hate it when a song link in my youtube playlist is broken because the underlying video is deleted. Using youtube data API, this can be fixed. To make youtube playlist modifications, you need to call youtube API with apt keys (https://code.google.com/p/youtube-api-samples/source/browse/samples/python/playlist_updates.py). You need to add a client_secrets.json file which will have the secret keys that allows you to access your private content on youtube. Access to public entities can be done with the public key in my script. This script runs as follows :
+
+ python youtube_dead_link_fixer.py <playlist id to be fixed>
+ 
+ Example : python youtube_dead_link_fixer.py PLAFB78EFDE5A6259A
