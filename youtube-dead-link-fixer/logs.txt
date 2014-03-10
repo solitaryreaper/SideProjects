@@ -1,0 +1,259 @@
+Listing songs for playlist : PL6C9FCCACE3EEDE41
+
+
+Song : Break Ke Baad - Dooriyan full video, Playlist Item Id : PLdSXT2gbIngjBHH0bM1xERktpjUxJhPvE, Video Id : _8iPVQ-1yGI
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=_8iPVQ-1yGI&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Break Ke Baad - Dooriyan full video is active ..
+
+
+Song : Phir Mohabbat Murder 2 (2011) Full Original Dvd ripped video HD song, Playlist Item Id : PLdSXT2gbIngiHUWPi2FV-AqbqXc5J_Dkx, Video Id : NJexGCWbWFM
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=NJexGCWbWFM&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Phir Mohabbat Murder 2 (2011) Full Original Dvd ripped video HD song is not active ..
+Deleting inactive song NJexGCWbWFM from current playlist ..
+Successfully deleted inactive song : NJexGCWbWFM from playlist ..
+API call for getting best song result is : https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=Phir+Mohabbat+Murder+2011+Full+Original+Dvd+ripped+video+HD+song&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Adding alternate video for this song : 9O9AXwJc2XE
+Successfully added new song 9O9AXwJc2XE to current playlist ..
+
+
+Song : Jane Kyon - Sufi Version (Always Kabhi Kabhi) Full Video Song HD, Playlist Item Id : PLdSXT2gbIngh3wMiyY4OKJjXmBk_spIBm, Video Id : UhKw1YJjqM4
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=UhKw1YJjqM4&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Jane Kyon - Sufi Version (Always Kabhi Kabhi) Full Video Song HD is not active ..
+Deleting inactive song UhKw1YJjqM4 from current playlist ..
+Successfully deleted inactive song : UhKw1YJjqM4 from playlist ..
+API call for getting best song result is : https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=Jane+Kyon+Sufi+Version+Always+Kabhi+Kabhi+Full+Video+Song+HD&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Adding alternate video for this song : 7u__71NygQA
+Successfully added new song 7u__71NygQA to current playlist ..
+
+
+Song : tera mera rishta, Playlist Item Id : PLdSXT2gbIngjpdlTCua-M1wmf3r5E5WL0, Video Id : odFMfn4FGew
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=odFMfn4FGew&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song tera mera rishta is active ..
+
+
+Song : Aye khuda - Murder 2 Full Song HD 720p, Playlist Item Id : PLdSXT2gbInggIU4Toza-AHJjC7NahGWXq, Video Id : gZHMzSNGXPs
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=gZHMzSNGXPs&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Aye khuda - Murder 2 Full Song HD 720p is active ..
+
+
+Song : Imran Khan - Aaja We Mahiya Music Video HD with English Translations & Lyrics, Playlist Item Id : PLdSXT2gbInghc262ITjilADrwixr0EbuC, Video Id : OBOweeoLPCs
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=OBOweeoLPCs&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Imran Khan - Aaja We Mahiya Music Video HD with English Translations & Lyrics is not active ..
+Deleting inactive song OBOweeoLPCs from current playlist ..
+Successfully deleted inactive song : OBOweeoLPCs from playlist ..
+API call for getting best song result is : https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=Imran+Khan+Aaja+We+Mahiya+Music+Video+HD+with+English+Translations+Lyrics&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Adding alternate video for this song : lzcwuoRH9yY
+Successfully added new song lzcwuoRH9yY to current playlist ..
+
+
+Song : Haal E Dil-Murder 2 Full original music Video Song 2011 in HD, Playlist Item Id : PLdSXT2gbInghRuLlvQq7uKGiUROHA--Ov, Video Id : Px7q1fLfG8E
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=Px7q1fLfG8E&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Haal E Dil-Murder 2 Full original music Video Song 2011 in HD is not active ..
+Deleting inactive song Px7q1fLfG8E from current playlist ..
+Successfully deleted inactive song : Px7q1fLfG8E from playlist ..
+API call for getting best song result is : https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=Haal+DilMurder+Full+original+music+Video+Song+2011+in+HD&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Adding alternate video for this song : vN57t0QGF90
+Successfully added new song vN57t0QGF90 to current playlist ..
+
+
+Song : Kahin To Hogi Woh--FULL SONG (HIGH QUALITY), Playlist Item Id : PLdSXT2gbInggYGAFzRZLGfB1KlfoujyX2, Video Id : KFwjibi-JRU
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=KFwjibi-JRU&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Kahin To Hogi Woh--FULL SONG (HIGH QUALITY) is active ..
+
+
+Song : Aazaadiyan - Udaan Full Song! - kunal70.mathur@gmail.com, Playlist Item Id : PLdSXT2gbInggX38uiQTg-iTbpUnan2dq6, Video Id : oG92Zm4T4Xw
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=oG92Zm4T4Xw&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Aazaadiyan - Udaan Full Song! - kunal70.mathur@gmail.com is active ..
+
+
+Song : Jiyein Kyun Dum Maaro Dum 2011- HD Starring Bipasha Basu and Rana Daggubati, Playlist Item Id : PLdSXT2gbIngiLSjmL2wPMkNKeqbKyNWN1, Video Id : a7GbBC0nkV0
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=a7GbBC0nkV0&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Jiyein Kyun Dum Maaro Dum 2011- HD Starring Bipasha Basu and Rana Daggubati is active ..
+
+
+Song : Aahatein - Agnee (splitsvilla 4 theme song) Best audio quality, Playlist Item Id : PLdSXT2gbIngj0tmBNRsJmC5u7aGCBghQa, Video Id : n06H7OcPd-g
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=n06H7OcPd-g&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Aahatein - Agnee (splitsvilla 4 theme song) Best audio quality is active ..
+
+
+Song : "Baanwre" Pyaar Ka Punchnama Full Video Song | Kartik, Divyendu, Playlist Item Id : PLdSXT2gbIngifhYy-nC3B7NMKxQzUY6H5, Video Id : qiqWINUDjvA
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=qiqWINUDjvA&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song "Baanwre" Pyaar Ka Punchnama Full Video Song | Kartik, Divyendu is active ..
+
+
+Song : "Aabhija mere do bacho ki maa"( original song by Vishvesh n Akhilesh )- Aagman, Playlist Item Id : PLdSXT2gbIngii953IeQKheQPDWWdm_OKl, Video Id : GdJCq2-Zn0c
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=GdJCq2-Zn0c&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song "Aabhija mere do bacho ki maa"( original song by Vishvesh n Akhilesh )- Aagman is active ..
+
+
+Song : Kailash Kher;Paresh Kamath;Naresh Kamath - Saiyyan, Playlist Item Id : PLdSXT2gbIngiIof48Q-ZQaUKy7RotDtyZ, Video Id : 9K4TgdPDt2o
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=9K4TgdPDt2o&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Kailash Kher;Paresh Kamath;Naresh Kamath - Saiyyan is active ..
+
+
+Song : Anjaani Raho Mein(Lucky Ali), Playlist Item Id : PLdSXT2gbInggW_niu11D99wbeCCk9zkP5, Video Id : 7LfexlhugI4
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=7LfexlhugI4&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Anjaani Raho Mein(Lucky Ali) is active ..
+
+
+Song : Nazia Hassan - aankhein churanay walay, Playlist Item Id : PLdSXT2gbInggC43m-P70EZ1p87igjC4tI, Video Id : D0OUgLs5viU
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=D0OUgLs5viU&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Nazia Hassan - aankhein churanay walay is active ..
+
+
+Song : "Life Sahi hai" Pyaar Ka Punchnama - Exclusive video, Playlist Item Id : PLdSXT2gbIngi6FX4c8LH_5uvSl7Ks1cVa, Video Id : sPFlUFaFMPg
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=sPFlUFaFMPg&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song "Life Sahi hai" Pyaar Ka Punchnama - Exclusive video is active ..
+
+
+Song : Kailash Kher - Teri Deewani, Playlist Item Id : PLdSXT2gbIngjdkt_dxAo4yC_Oqg2GCbWl, Video Id : h5FNJb3EIQI
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=h5FNJb3EIQI&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Kailash Kher - Teri Deewani is active ..
+
+
+Song : nahi rakhta dil me kuch lucky ali, Playlist Item Id : PLdSXT2gbIngg9nk2tHpjtAmqe0yW_BUUD, Video Id : lsOMAXjoOis
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=lsOMAXjoOis&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song nahi rakhta dil me kuch lucky ali is active ..
+
+
+Song : Lucky Ali - Kitni Haseen Zindagi, Playlist Item Id : PLdSXT2gbIngiZTnd8QS0u3lxBqH0FP3PZ, Video Id : lYJDc-wMOWY
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=lYJDc-wMOWY&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Lucky Ali - Kitni Haseen Zindagi is active ..
+
+
+Song : Zindagi Na Milegi Dobara - Dil Dhadakne Do, Playlist Item Id : PLdSXT2gbIngjd5Fq3UyfNjY77sfiE2UnR, Video Id : -ByjbbT66Lg
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=-ByjbbT66Lg&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Zindagi Na Milegi Dobara - Dil Dhadakne Do is active ..
+
+
+Song : Kaho Na Kaho, Playlist Item Id : PLdSXT2gbIngiF-I2shCdXK7-4-Zg2teWE, Video Id : aOpWeAY_sEc
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=aOpWeAY_sEc&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Kaho Na Kaho is active ..
+
+
+Song : 'Senorita' (Official video song) 'Zindagi Na Milegi Dobara', Playlist Item Id : PLdSXT2gbIngj_rbPSLpm20BpTVD5-HXzz, Video Id : PuhOFhmy3BU
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=PuhOFhmy3BU&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song 'Senorita' (Official video song) 'Zindagi Na Milegi Dobara' is active ..
+
+
+Song : Haan Tu Hai - Jannat | High Quality | Full Video, Playlist Item Id : PLdSXT2gbInghnwBXwcRfV8Mbzs4bShVAy, Video Id : w6BqMcNAR5k
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=w6BqMcNAR5k&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Haan Tu Hai - Jannat | High Quality | Full Video is not active ..
+Deleting inactive song w6BqMcNAR5k from current playlist ..
+Successfully deleted inactive song : w6BqMcNAR5k from playlist ..
+API call for getting best song result is : https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=Haan+Tu+Hai+Jannat+High+Quality+Full+Video&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Adding alternate video for this song : GUFCv8LCKqU
+Successfully added new song GUFCv8LCKqU to current playlist ..
+
+
+Song : KK - Pyaar Ke Pal, Playlist Item Id : PLdSXT2gbIngh-yMvEAOY1awav4vfAiszD, Video Id : gSy4HeDjPvs
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=gSy4HeDjPvs&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song KK - Pyaar Ke Pal is active ..
+
+
+Song : KK - Yaaron, Playlist Item Id : PLdSXT2gbInghlD-dpsUBTmBZMXp1x1VsC, Video Id : JTCYGs5_xnc
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=JTCYGs5_xnc&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song KK - Yaaron is active ..
+
+
+Song : Tujhe Bhula Diya - Anjaana Anjaani, Playlist Item Id : PLdSXT2gbIngheOQoybmPvc_jQjkUvlOwk, Video Id : xVaBIF1LnwY
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=xVaBIF1LnwY&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Tujhe Bhula Diya - Anjaana Anjaani is active ..
+
+
+Song : Tera Mera Pyar....., Playlist Item Id : PLdSXT2gbIngh-QJ8rx7cfV6GBclijqNwJ, Video Id : vgutOGl1TN4
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=vgutOGl1TN4&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Tera Mera Pyar..... is active ..
+
+
+Song : Jalta Raha, Playlist Item Id : PLdSXT2gbIngivej7EGI6Y1C7dWCH3g6vZ, Video Id : CBdjI5KzX6s
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=CBdjI5KzX6s&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Jalta Raha is active ..
+
+
+Song : TERI YAADEIN(LOVE STORY), Playlist Item Id : PLdSXT2gbIngiacNK4YiqZ1E8Hvou6BvLa, Video Id : tnz4-r6PKOM
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=tnz4-r6PKOM&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song TERI YAADEIN(LOVE STORY) is active ..
+
+
+Song : Aaj Phir teri Yaad aa gayi -Dhiraj.flv, Playlist Item Id : PLdSXT2gbIngj6Tvd-lXMqQQNqPGs9UzzP, Video Id : FJLsa7mG1ZI
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=FJLsa7mG1ZI&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Aaj Phir teri Yaad aa gayi -Dhiraj.flv is active ..
+
+
+Song : i just wana spend my life with you, Playlist Item Id : PLdSXT2gbInghZdnBsXO2fDgccS93uA_MV, Video Id : XNRpIgD7g1E
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=XNRpIgD7g1E&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song i just wana spend my life with you is active ..
+
+
+Song : Sona Mohaptra - Bolo Na, Playlist Item Id : PLdSXT2gbIngh9WP3zI9RO7KKBapdT4cPp, Video Id : gPZ04ujk-cQ
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=gPZ04ujk-cQ&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Sona Mohaptra - Bolo Na is active ..
+
+
+Song : Euphoria - Maaeri, Playlist Item Id : PLdSXT2gbInghaOMGQ-q8ZmCnYNIDFT5if, Video Id : ieUWx6VXYgw
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=ieUWx6VXYgw&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Euphoria - Maaeri is active ..
+
+
+Song : Zindagi Nay Zindagi Bhar Gham Diye, Playlist Item Id : PLdSXT2gbInghOEiGoQS1iIqSFGZoic0aj, Video Id : jLJz6P6OpQg
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=jLJz6P6OpQg&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Zindagi Nay Zindagi Bhar Gham Diye is active ..
+
+
+Song : Aaja Nachle ~ O Re Piya full song by rahat fatah ali khan, Playlist Item Id : PLdSXT2gbInggzgS8n81DrP_TPxMp6vB8k, Video Id : q9fZg_JIJvQ
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=q9fZg_JIJvQ&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Aaja Nachle ~ O Re Piya full song by rahat fatah ali khan is active ..
+
+
+Song : Saaiyaan  - Song - Ta Ra Rum Pum, Playlist Item Id : PLdSXT2gbInghsN1qUWm0qUfwmbUCUYDxF, Video Id : nBdJzx84rxQ
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=nBdJzx84rxQ&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Saaiyaan  - Song - Ta Ra Rum Pum is active ..
+
+
+Song : Lucky Ali - Dekha Hai Aise Bhi, Playlist Item Id : PLdSXT2gbInghbB0T3WMT0s9CZeAwNvZnN, Video Id : bj6qqcM_xzg
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=bj6qqcM_xzg&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Lucky Ali - Dekha Hai Aise Bhi is active ..
+
+
+Song : Mohabbat Maine Kabhi Ki - Yaad from Sonu Nigam, Playlist Item Id : PLdSXT2gbIngjRmEsIOsKcPBkEL1-rnEY_, Video Id : ti3XZ2E3PqM
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=ti3XZ2E3PqM&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Mohabbat Maine Kabhi Ki - Yaad from Sonu Nigam is active ..
+
+
+Song : Kuch Is Tarah - Atif Aslam (original), Playlist Item Id : PLdSXT2gbIngiHR36k-muVhZCMLMtW4pfC, Video Id : Gr5MO8L-288
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=Gr5MO8L-288&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Kuch Is Tarah - Atif Aslam (original) is active ..
+
+
+Song : ''Hawa Hawai" Shaitan Video Song | Kalki Koechlin, Gulshan Deviah, Playlist Item Id : PLdSXT2gbIngi6s2uUpCfCyB1OSIRldJhz, Video Id : uhrhuDq-tTY
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=uhrhuDq-tTY&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song ''Hawa Hawai" Shaitan Video Song | Kalki Koechlin, Gulshan Deviah is active ..
+
+
+Song : Pari Pari hai ek Pari, Playlist Item Id : PLdSXT2gbInggWnIR3JsOHBfVHrkHGzTTK, Video Id : c-saNxa7SV0
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=c-saNxa7SV0&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Pari Pari hai ek Pari is active ..
+
+
+Song : Tu.. dil ki khushi dil ki pyass- lucky ali - sur.mp4, Playlist Item Id : PLdSXT2gbIngiPCUxaVLRONII02P9o_imY, Video Id : ii7lDm7V6SE
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=ii7lDm7V6SE&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song Tu.. dil ki khushi dil ki pyass- lucky ali - sur.mp4 is active ..
+
+
+Song : aa bhi ja, Playlist Item Id : PLdSXT2gbInghws96YA7Ez_SuQjJ_shdzv, Video Id : TIv630cD8kQ
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=TIv630cD8kQ&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song aa bhi ja is active ..
+
+
+Song : bin tere jeena nahi ... EMRAN HASHMI, Playlist Item Id : PLdSXT2gbIngg7VkTuvpp9s0EhIb7kv14h, Video Id : 3o1ScDWZgU4
+API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=snippet&id=3o1ScDWZgU4&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
+Song bin tere jeena nahi ... EMRAN HASHMI is active ..
+
+
+ --------------------------- Run summary ---------------------------
+#Total songs : 45
+#Fixed songs : 5
+#Lost songs : 0
+Fixed songs : [u'Phir Mohabbat Murder 2 (2011) Full Original Dvd ripped video HD song', u'Jane Kyon - Sufi Version (Always Kabhi Kabhi) Full Video Song HD', u'Imran Khan - Aaja We Mahiya Music Video HD with English Translations & Lyrics', u'Haal E Dil-Murder 2 Full original music Video Song 2011 in HD', u'Haan Tu Hai - Jannat | High Quality | Full Video']
+Lost songs : []

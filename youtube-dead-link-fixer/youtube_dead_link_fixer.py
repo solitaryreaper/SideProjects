@@ -58,6 +58,11 @@ class PlayListSong(object):
 def get_playlist_songs(playlist_id):
     """
         Returns all the songs corresponding to a playlist URL
+        
+        Found an issue where this API call does not fetch broken videos because they have been
+        deleted altogether. It is not even possible to fetch song metadata for such cases. These
+        songs don't even appear in the list of songs in playlist and hence have to be manually
+        weeded out :(
     """
     api_call = YOUTUBE_SERVICE_BASE_URL + "playlistItems?part=snippet"
     api_call = api_call + "&maxResults=" + str(MAX_RESULTS) +"&playlistId=" + playlist_id + "&key=" + SIMPLE_DEVELOPER_KEY
@@ -84,7 +89,12 @@ def get_my_playlists():
 
 def is_song_url_active(song_video_id):
     """
-        Determines if the youtube song URL is broken
+        Determines if the youtube song URL is broken.
+        
+        Apparently this fixes only these kind of errors
+        (
+            This video has been removed because its content violated YouTube's Terms of Service        
+        )
     """
     api_call = YOUTUBE_SERVICE_BASE_URL + "videos?part=snippet&id=" + song_video_id + "&key=" + SIMPLE_DEVELOPER_KEY
     print "API Call for validating video song :" + api_call
@@ -202,7 +212,16 @@ if __name__ == '__main__':
     
     print "Listing songs for playlist : " + output(playlist_id)
     playlist_songs = get_playlist_songs(playlist_id)
+    
+    total_songs = len(playlist_songs)
+    songs_fixed = 0
+    songs_permanently_lost = 0
+    
+    fixed_songs = []
+    lost_songs = []
+    
     for playlist_song in playlist_songs:
+        print "\n"
         print str(playlist_song)
         
         is_song_active = is_song_url_active(playlist_song.video_id)
@@ -216,6 +235,12 @@ if __name__ == '__main__':
             if is_song_deleted:
                 print "Successfully deleted inactive song : " + playlist_song.video_id + " from playlist .."
                 
+                if playlist_song.name == "Private video" :
+                    songs_permanently_lost = songs_permanently_lost + 1
+                    lost_songs.append(playlist_song.video_id)
+                    print "Song " + playlist_song.video_id + " is a private video !! Sorry this song can't be recovered !!"
+                    continue
+                
                 search_keywords_string = get_search_keywords_for_song(playlist_song.name)
                 alt_song_video_id = get_best_song_with_keywords(search_keywords_string)
                 print "Adding alternate video for this song : " + output(alt_song_video_id)
@@ -226,5 +251,14 @@ if __name__ == '__main__':
                 is_song_added = add_song_to_playlist(youtube_obj, alt_song_video_id, playlist_id)
                 if is_song_added:
                     print "Successfully added new song " + output(alt_song_video_id) + " to current playlist .."
+                    songs_fixed = songs_fixed + 1
+                    fixed_songs.append(playlist_song.name)
                 else:
                     print "Failed to add new song " + output(alt_song_video_id) + " to current playlist .."
+
+    print "\n\n --------------------------- Run summary ---------------------------"
+    print "#Total songs : " + str(total_songs)
+    print "#Fixed songs : " + str(songs_fixed)
+    print "#Lost songs : " + str(songs_permanently_lost)
+    print "Fixed songs : " + str(fixed_songs)
+    print "Lost songs : " + str(lost_songs)
