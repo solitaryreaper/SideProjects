@@ -1,204 +1,376 @@
 Found 42 songs in the playlist : PLBC9DCE48EF03B283
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=w2lndo0leCs&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : w2lndo0leCs are [u'/m/01cm9z0', u'/m/03g9xj', u'/m/03hmh_']
 Music Single : [u'alternative', u'alternative and punk', u'alternative rock', u'indie rock', u'rock']
-Soundtrack  : [u'superhero', u'drama', u'science fiction', u'[1]', u'fantasy', u'[2]']
-Failed to get genre for topic : /m/03hmh_. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'alternative rock', u'post-britpop', u'power pop', u'indie rock']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=aAzF1sFchPw&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : aAzF1sFchPw are [u'/m/01h_dnz', u'/m/0lfbfx', u'/m/03g9xj', u'/m/03mbsqs']
-Failed to get genre for topic : /m/01h_dnz. Reason : 'NoneType' object has no attribute 'findAll'
 Music Single : [u'alternrock', u'rock']
-Soundtrack  : [u'superhero', u'drama', u'science fiction', u'[1]', u'fantasy', u'[2]']
 Soundtrack  : [u'alternative rock']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=zhTNz_vizho&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : zhTNz_vizho are [u'/m/06qlh6', u'/m/01bkm_c', u'/m/03y317']
-Failed to get genre for topic : /m/06qlh6. Reason : 'citation'
 Music Single : []
-Soundtrack  : []
 Found no music genre for song zhTNz_vizho
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=w28ZREQe3_Q&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : w28ZREQe3_Q are [u'/m/08shgj', u'/m/01l9w5']
 Soundtrack  : [u'pop rock']
-Failed to get genre for topic : /m/01l9w5. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'folk rock', u'pop rock']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=qoYbVosc93U&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : qoYbVosc93U are [u'/m/0jnk7', u'/m/0462rkv', u'/m/0pgz3q']
-Failed to get genre for topic : /m/0jnk7. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'celtic', u'neo-medieval', u'folk', u'rock']
 Soundtrack  : [u'pop']
 Music Single : [u'classic prog', u'progressive rock']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=st3qM7J3dAg&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : st3qM7J3dAg are [u'/m/03mm31', u'/m/097gfy', u'/m/01sttz']
-Soundtrack  : []
 Soundtrack  : [u'pop']
 Failed to get genre for topic : /m/01sttz. Reason : 'NoneType' object has no attribute 'findAll'
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=PUO5562vWzI&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : PUO5562vWzI are [u'/m/020_81', u'/m/02x38xl', u'/m/0r6sp8']
-Failed to get genre for topic : /m/020_81. Reason : 'NoneType' object has no attribute 'findAll'
 Soundtrack  : [u'latin pop']
 Music Single : [u'blues', u'pop']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=dJN_AbBLjh4&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : dJN_AbBLjh4 are [u'/m/0l0wt6', u'/m/02d130']
 Soundtrack  : [u'country']
-Failed to get genre for topic : /m/02d130. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'folk rock', u'dance pop', u'electropop', u'pop']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=ZiUEu5gatW8&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : ZiUEu5gatW8 are [u'/m/02vxdk0']
-Failed to get genre for topic : /m/02vxdk0. Reason : 'NoneType' object has no attribute 'findAll'
-Found no music genre for song ZiUEu5gatW8
+Soundtrack  : [u'folk rock', u'acoustic rock', u'pop']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=IGG5LBAbAP4&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : IGG5LBAbAP4 are [u'/m/0161c2', u'/m/0mtwn7']
-Failed to get genre for topic : /m/0161c2. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'alternative rock', u'pop punk', u'pop rock', u'alternative rock[1]']
 Music Single : [u'pop', u'adult alternative pop/rock', u'alternative rock', u'alternative/indie rock', u'blues_rock_pop rock_rock_pop rock_blues_rock', u'more...']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=9AEoUa0Hlso&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : 9AEoUa0Hlso are [u'/m/01wsl7c', u'/m/0c9nqq', u'/m/016r4_2']
-Failed to get genre for topic : /m/01wsl7c. Reason : 'NoneType' object has no attribute 'findAll'
-Soundtrack  : [u'pop rock', u'folk pop']
+Soundtrack  : [u'alternative rock', u'folk rock', u'piano rock', u'[1] folktronica[2]', u'folktronica', u'indie pop']
+Soundtrack  : [u'folk pop', u'pop rock']
 Failed to get genre for topic : /m/016r4_2. Reason : HTTP Error 403: Forbidden
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=HCANRxAy4oA&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : HCANRxAy4oA are [u'/m/030w0v', u'/m/0cfvgq', u'/m/010rvng']
-Failed to get genre for topic : /m/030w0v. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'blues', u'jazz', u'folk-pop']
 Soundtrack  : [u'acoustic', u'blues']
 Music Single : [u'jazz', u'soundtrack']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=E-X2FIfH9rc&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : E-X2FIfH9rc are [u'/m/03hmr4']
-Soundtrack  : []
 Found no music genre for song E-X2FIfH9rc
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=AxDuQtqrDDU&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : AxDuQtqrDDU are [u'/m/01krtmt', u'/m/0fs4z05']
-Failed to get genre for topic : /m/01krtmt. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'alternative rock', u'soft rock', u'pop rock']
 Music Single : []
-Found no music genre for song AxDuQtqrDDU
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=OHBX73kk9uA&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : OHBX73kk9uA are [u'/m/01krtmt', u'/m/0td1gl']
-Failed to get genre for topic : /m/01krtmt. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'alternative rock', u'soft rock', u'pop rock']
 Music Single : []
-Found no music genre for song OHBX73kk9uA
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=7EnMWDz8ShM&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : 7EnMWDz8ShM are [u'/m/0bhslx', u'/m/01cd5qw']
-Failed to get genre for topic : /m/0bhslx. Reason : 'NoneType' object has no attribute 'findAll'
+Failed to get genre for topic : /m/0bhslx. Reason : HTTP Error 503: Service Unavailable
 Music Single : []
 Found no music genre for song 7EnMWDz8ShM
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=FT62Gwv70kM&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : FT62Gwv70kM are [u'/m/03hmh_', u'/m/0bscfb']
-Failed to get genre for topic : /m/03hmh_. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'alternative rock', u'post-britpop', u'power pop', u'indie rock']
 Soundtrack  : [u'alternative rock', u'power pop']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=hNSGCVPPXvk&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : hNSGCVPPXvk are [u'/m/03hmh_', u'/m/0bscrx', u'/m/0tqc1z']
-Failed to get genre for topic : /m/03hmh_. Reason : 'NoneType' object has no attribute 'findAll'
-Soundtrack  : [u'indie rock', u'alternative rock']
+Soundtrack  : [u'alternative rock', u'post-britpop', u'power pop', u'indie rock']
+Soundtrack  : [u'alternative rock', u'indie rock']
 Music Single : [u'indie rock', u'new bands', u'rock pop']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=0WiDXCXEtlM&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : 0WiDXCXEtlM are [u'/m/01myrz', u'/m/09zhv6']
 Failed to get genre for topic : /m/01myrz. Reason : 'NoneType' object has no attribute 'findAll'
-Soundtrack  : [u'pop', u'pop rock']
+Soundtrack  : [u'pop rock', u'pop']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=ngpxA2VlFYk&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : ngpxA2VlFYk are [u'/m/01cwhp', u'/m/026t8bz']
 Failed to get genre for topic : /m/01cwhp. Reason : 'citation'
 Soundtrack  : [u'pop']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=pq6lsZoWcFE&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : pq6lsZoWcFE are [u'/m/0132t3z', u'/m/02khx7', u'/m/03mm31']
 Music Single : []
-Failed to get genre for topic : /m/02khx7. Reason : 'NoneType' object has no attribute 'findAll'
-Soundtrack  : []
-Found no music genre for song pq6lsZoWcFE
+Soundtrack  : [u'latin pop', u'pop']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=OwLh9FKoM6M&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : OwLh9FKoM6M are [u'/m/01vwbts']
-Failed to get genre for topic : /m/01vwbts. Reason : 'NoneType' object has no attribute 'findAll'
-Found no music genre for song OwLh9FKoM6M
+Soundtrack  : [u'pop']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=55FMOJMhV9s&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : 55FMOJMhV9s are [u'/m/058yxt', u'/m/027050b']
-Failed to get genre for topic : /m/058yxt. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'indie pop', u'indie rock', u'disco']
 Soundtrack  : [u'indie pop', u'indie rock']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=bABkONZce-o&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : bABkONZce-o are [u'/m/0q4c3j', u'/m/023m3f']
 Music Single : [u'adult alternative rock', u'soundtrack']
-Soundtrack  : []
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=7qH4qyi1-Ys&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : 7qH4qyi1-Ys are [u'/m/01ljtr1', u'/m/07vqhw', u'/m/019qynh']
-Failed to get genre for topic : /m/01ljtr1. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'country', u'country pop']
 Soundtrack  : [u'country']
 Failed to get genre for topic : /m/019qynh. Reason : 'citation'
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=NG2zyeVRcbs&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : NG2zyeVRcbs are [u'/m/05mwvmw', u'/m/0bdxs5', u'/m/0fvqhmr', u'/m/0mdxd']
 Soundtrack  : [u'country pop']
-Failed to get genre for topic : /m/0bdxs5. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'country', u'hip hop', u'pop', u'rock']
 Music Single : []
-Failed to get genre for topic : /m/0mdxd. Reason : 'NoneType' object has no attribute 'findAll'
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=gH476CxJxfg&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : gH476CxJxfg are [u'/m/0c1f20', u'/m/06662b', u'/m/0mdxd']
 Soundtrack  : [u'pop rock']
-Failed to get genre for topic : /m/06662b. Reason : 'NoneType' object has no attribute 'findAll'
-Failed to get genre for topic : /m/0mdxd. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'piano rock', u'alternative rock', u'pop rock']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=Eo-tp0JZvUA&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Failed to find topics for song Eo-tp0JZvUA
 Found no topics for song : Eo-tp0JZvUA
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=CjY_uSSncQw&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : CjY_uSSncQw are [u'/m/01r9fv', u'/m/0f191c']
-Failed to get genre for topic : /m/01r9fv. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'hard rock', u'pop rock', u'rock']
 Soundtrack  : [u'new wave', u'rock']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=1OfsZyYPLoI&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : 1OfsZyYPLoI are [u'/m/049fvbf', u'/m/0fw04vy', u'/m/09gd9g0']
-Failed to get genre for topic : /m/049fvbf. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'country', u'country pop']
 Music Single : [u'contemporary country', u'country', u'country-pop', u'covered by glee', u'pop/rock']
-Failed to get genre for topic : /m/09gd9g0. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'country', u'country pop']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=KEJa_VgpIAc&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : KEJa_VgpIAc are [u'/m/029dy9', u'/m/02vwvt0']
-Failed to get genre for topic : /m/029dy9. Reason : 'NoneType' object has no attribute 'findAll'
-Failed to get genre for topic : /m/02vwvt0. Reason : 'NoneType' object has no attribute 'findAll'
-Found no music genre for song KEJa_VgpIAc
+Soundtrack  : [u'folk rock', u'pop rock']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=NMNgbISmF4I&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : NMNgbISmF4I are [u'/m/0134pk', u'/m/0bsql9']
-Failed to get genre for topic : /m/0134pk. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'blues rock', u'hard rock', u'heavy metal']
 Soundtrack  : [u'blues rock']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=qfNmyxV2Ncw&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : qfNmyxV2Ncw are [u'/m/0134pk', u'/m/0lgjjq']
-Failed to get genre for topic : /m/0134pk. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'blues rock', u'hard rock', u'heavy metal']
 Music Single : []
-Found no music genre for song qfNmyxV2Ncw
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=8r_ubcUd-gE&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : 8r_ubcUd-gE are [u'/m/029dy9', u'/m/0xs05_']
-Failed to get genre for topic : /m/029dy9. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'folk rock', u'pop rock']
 Music Single : []
-Found no music genre for song 8r_ubcUd-gE
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=XV_dbCF1jOA&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : XV_dbCF1jOA are [u'/m/029dy9', u'/m/01vswwx', u'/m/0d701l', u'/m/0mdn3d']
-Failed to get genre for topic : /m/029dy9. Reason : 'NoneType' object has no attribute 'findAll'
-Failed to get genre for topic : /m/01vswwx. Reason : 'NoneType' object has no attribute 'findAll'
-Soundtrack  : [u'alternative country', u'alternative rock']
+Soundtrack  : [u'folk rock', u'pop rock']
+Soundtrack  : [u'alternative rock', u'alternative country']
 Music Single : []
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=TR3Vdo5etCQ&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : TR3Vdo5etCQ are [u'/m/016fmf', u'/m/021f1m', u'/m/016fnb']
-Failed to get genre for topic : /m/016fmf. Reason : 'NoneType' object has no attribute 'findAll'
-Soundtrack  : [u'pop rock', u'alternative rock', u'soft rock', u'[1]']
-Failed to get genre for topic : /m/016fnb. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'alternative rock', u'ska punk', u'punk rock', u'pop punk', u'pop rock', u'reggae rock', u'reggae fusion', u'new wave', u'[1] punk rock', u'ska']
+Soundtrack  : [u'alternative rock', u'soft rock[1]', u'soft rock', u'pop rock']
+Soundtrack  : [u'dance', u'r&b', u'electronic', u'pop', u'rock']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=daqfr6DJsGc&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : daqfr6DJsGc are [u'/m/026smdk', u'/m/0fxl2y1']
-Failed to get genre for topic : /m/026smdk. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'adult contemporary', u'baroque pop', u'pop', u'crossover', u'soft rock', u'indie pop', u'folk']
 Music Single : []
-Found no music genre for song daqfr6DJsGc
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=uWqDAImYQws&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : uWqDAImYQws are [u'/m/07lf2h', u'/m/0281w2s', u'/m/015p3pq']
-Failed to get genre for topic : /m/07lf2h. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'pop rock']
 Soundtrack  : [u'alternative rock']
 Music Single : [u'adult alternative pop/rock', u'alternative/indie rock', u'american trad rock', u'pop/rock', u'rock']
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=Eo-tp0JZvUA&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Failed to find topics for song Eo-tp0JZvUA
 Found no topics for song : Eo-tp0JZvUA
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=5vl6nCS03T0&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : 5vl6nCS03T0 are [u'/m/03g9xj', u'/m/01t110', u'/m/0m1pbn', u'/m/04jc34s', u'/m/0frsf8m']
-Soundtrack  : [u'superhero', u'drama', u'science fiction', u'[1]', u'fantasy', u'[2]']
-Failed to get genre for topic : /m/01t110. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'alternative rock', u'acoustic', u'country pop', u'pop rock']
 Music Single : [u'rock', u'adult alternative pop/rock', u'alternative/indie rock', u'pop/rock']
-Failed to get genre for topic : /m/04jc34s. Reason : 'NoneType' object has no attribute 'findAll'
 Music Single : []
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=W4sHAtekDlo&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : W4sHAtekDlo are [u'/m/01p4vmq', u'/m/0r8_vn']
-Failed to get genre for topic : /m/01p4vmq. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'pop']
 Music Single : []
-Found no music genre for song W4sHAtekDlo
+
+
+
 API Call for validating video song :https://www.googleapis.com/youtube/v3/videos?part=topicDetails&id=OT5msu-dap8&key=AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs
 Topics for song : OT5msu-dap8 are [u'/m/0hmlc', u'/m/09rlnz', u'/m/0lj_dp']
-Failed to get genre for topic : /m/0hmlc. Reason : 'NoneType' object has no attribute 'findAll'
+Soundtrack  : [u'r&b', u'adult contemporary', u'pop rock', u'pop']
 Soundtrack  : [u'pop']
 Music Single : [u'pop', u'adult contemporary', u'dance-pop', u'euro-pop', u'pop/rock', u'more...']
-Genre stats : {u'adult alternative pop/rock': 3, u'alternative country': 1, u'rock pop': 1, u'pop': 8, u'fantasy': 3, u'power pop': 1, u'dance-pop': 1, u'blues': 2, u'contemporary country': 1, u'progressive rock': 1, u'alternative': 1, u'alternative and punk': 1, u'alternative rock': 8, u'country-pop': 1, u'superhero': 3, u'indie rock': 4, u'blues rock': 1, u'more...': 2, u'country pop': 1, u'[2]': 3, u'new bands': 1, u'jazz': 1, u'adult contemporary': 1, u'alternrock': 1, u'alternative/indie rock': 3, u'classic prog': 1, u'soft rock': 1, u'pop/rock': 4, u'indie pop': 1, u'pop rock': 5, u'american trad rock': 1, u'soundtrack': 2, u'new wave': 1, u'euro-pop': 1, u'country': 3, u'blues_rock_pop rock_rock_pop rock_blues_rock': 1, u'latin pop': 1, u'drama': 3, u'science fiction': 3, u'adult alternative rock': 1, u'rock': 5, u'covered by glee': 1, u'acoustic': 1, u'folk pop': 1, u'[1]': 4}
-#Total songs : 42, #Tagged songs : 27
-Songs without genre : [u'zhTNz_vizho', u'ZiUEu5gatW8', u'E-X2FIfH9rc', u'AxDuQtqrDDU', u'OHBX73kk9uA', u'7EnMWDz8ShM', u'pq6lsZoWcFE', u'OwLh9FKoM6M', u'KEJa_VgpIAc', u'qfNmyxV2Ncw', u'8r_ubcUd-gE', u'daqfr6DJsGc', u'W4sHAtekDlo']
+Genre stats : 
+------------------------
+folk rock,7
+adult alternative pop/rock,3
+pop punk,2
+dance,1
+alternative country,1
+rock pop,1
+pop,15
+crossover,1
+contemporary country,1
+new wave,2
+power pop,3
+adult contemporary,2
+dance-pop,1
+heavy metal,2
+alternative,1
+hard rock,3
+progressive rock,1
+acoustic rock,1
+folk,2
+alternative rock,13
+blues,2
+pop rock,15
+indie rock,4
+blues rock,2
+electronic,1
+baroque pop,1
+more...,2
+r&b,2
+[1] punk rock,1
+country pop,4
+alternative and punk,1
+ska,1
+new bands,1
+soft rock[1],1
+ska punk,1
+punk rock,1
+jazz,1
+acoustic,2
+piano rock,2
+neo-medieval,1
+alternrock,1
+alternative/indie rock,3
+classic prog,1
+soft rock,4
+electropop,1
+folk-pop,1
+folktronica,1
+[1] folktronica[2],1
+american trad rock,1
+post-britpop,3
+celtic,1
+euro-pop,1
+reggae fusion,1
+country,4
+blues_rock_pop rock_rock_pop rock_blues_rock,1
+country-pop,1
+latin pop,2
+disco,1
+reggae rock,1
+pop/rock,4
+soundtrack,2
+hip hop,1
+adult alternative rock,1
+rock,8
+covered by glee,1
+dance pop,1
+folk pop,1
+alternative rock[1],1
+indie pop,3
+
+#Total songs : 42, #Tagged songs : 37
+
+Songs without genre : [u'zhTNz_vizho', u'E-X2FIfH9rc', u'7EnMWDz8ShM']

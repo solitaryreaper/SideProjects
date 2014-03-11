@@ -1,5 +1,5 @@
 import pylast
-import urllib2, json, httplib2, os, json, sys, time
+import urllib2, json, httplib2, os, json, sys, time, re
 from bs4 import BeautifulSoup
 
 # LASTFM constants
@@ -114,9 +114,9 @@ def get_genre_details_from_topic(topic_id):
         # If freebase music category object, easy to find music genres
         if category == MUSIC_GENRE_CATEGORY:
             raw_genres = topic['property']['/type/object/name']['values']
-            genres = [genre['text'].strip().lower() for genre in raw_genres]
+            genres = [genre['text'].strip().lower() for genre in raw_genres if len(genre['text'].strip().lower()) > 2]
             print "Music Genre : " + str(genres)
-        else :
+        elif category == MUSIC_SINGLE_CATEGORY or category == ARTIST_CATEGORY :
             # If freebase soundtrack category, navigate using wikipedia link, to get genres using infobox
             if '/common/topic/description' in topic['property']:
                 wiki_link = topic['property']['/common/topic/description']['values'][0]['citation']['uri'].strip()
@@ -148,7 +148,7 @@ def get_topic_category(topic):
         category = MUSIC_GENRE_CATEGORY
     elif "celebrity" in notable_types or "celebrity" in notable_for:
         category = ARTIST_CATEGORY  
-    else:
+    elif "music" in notable_types or "music" in notable_for:
         category = MUSIC_SINGLE_CATEGORY          
             
     return category
@@ -161,7 +161,7 @@ def get_genres_for_song_from_wiki(url):
     html = urllib2.urlopen(url).read()
     soup = BeautifulSoup(html)
     
-    infobox = soup.find('table', {'class' : 'infobox vevent'})
+    infobox = soup.find('table', {'class' : re.compile(r".*infobox.*")})
     rows = infobox.findAll('tr')
     for row in rows:
         key, value = "", ""
@@ -172,12 +172,21 @@ def get_genres_for_song_from_wiki(url):
         except Exception, err:
             continue
         
-        if key == "Genre":
+        if "Genre" in key:
             td = row.find('td')
             links = td.findAll('a')
-            genres = [link.text.strip().lower() for link in links]        
+            # Hack : Really need to learn regex well soon !!
+            genres = [link.text.strip().lower() for link in links if len(link.text.strip().lower().replace("[", "").replace("]", "")) > 2]
+            
+            # Sometimes the genres don't have hyperlinks
+            #Hack : Really need to learn regex well soon !!
+            genre_string = td.text.strip().replace("\n", ",").replace("[1][2][3]", "")
+            other_genres = [genre.strip().lower() for genre in genre_string.split(",") if len(genre.strip().lower()) > 2]
+            
+            genres.extend(other_genres)        
     
-    return genres
+    unique_genres = list(set(genres))
+    return unique_genres
     
 def get_genres_for_song_from_musicbrainz(url):
     """
@@ -221,7 +230,7 @@ def get_genres_from_song_topics(topics):
         if song_genres:
             genres.extend(song_genres)
 
-    return genres
+    return list(set(genres))
 
 def analyze_playlist(youtube_playlist_id):
     """
@@ -237,6 +246,7 @@ def analyze_playlist(youtube_playlist_id):
     total_songs = len(videos)
     tagged_songs = 0
     for video_id in videos:
+        print "\n\n"
         time.sleep(3)
         
         topics_for_song = get_youtube_song_details(video_id)
@@ -258,9 +268,13 @@ def analyze_playlist(youtube_playlist_id):
 
                 genre_stats[genre] = genre_cnt            
         
-    print "Genre stats : " + str(genre_stats)
-    print "#Total songs : " + str(total_songs) + ", #Tagged songs : " + str(tagged_songs)
-    print "Songs without genre : " + str(songs_wo_genres)
+    print "Genre stats : "
+    print "------------------------"
+    for genre, count in genre_stats.iteritems():
+        print genre + "," + str(count)
+        
+    print "\n#Total songs : " + str(total_songs) + ", #Tagged songs : " + str(tagged_songs)
+    print "\nSongs without genre : " + str(songs_wo_genres)
         
 def test():
     """
@@ -277,9 +291,14 @@ def test():
     #genres = get_genres_for_song_from_musicbrainz("http://musicbrainz.org/recording/574eafc0-6909-4278-94fa-083ea5aefc61/tags")
     #print str(genres)
     
-    genres= get_genre_details_from_topic("/m/026smdk")
+    genres= get_genre_details_from_topic("/m/0134pk")
     print str(genres)
+    
+    #genres = get_genres_for_song_from_wiki("http://en.wikipedia.org/wiki/Wish_You_Were_Here_(Pink_Floyd_album)")
+    #genres = get_genres_for_song_from_wiki("http://en.wikipedia.org/wiki/index.html?curid=12245980")
+    #genres = get_genres_for_song_from_wiki("http://en.wikipedia.org/wiki/Set_Fire_to_the_Rain")
+    #print str(genres)
         
 if __name__ == '__main__':
-    #analyze_playlist("PLBC9DCE48EF03B283")
-    test()
+    analyze_playlist("PLBC9DCE48EF03B283")
+    #test()
