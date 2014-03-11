@@ -63,6 +63,8 @@ def get_playlist_songs(playlist_id):
         deleted altogether. It is not even possible to fetch song metadata for such cases. These
         songs don't even appear in the list of songs in playlist and hence have to be manually
         weeded out :(
+        
+        This bug is logged here : https://code.google.com/p/gdata-issues/issues/detail?id=6062
     """
     api_call = YOUTUBE_SERVICE_BASE_URL + "playlistItems?part=snippet"
     api_call = api_call + "&maxResults=" + str(MAX_RESULTS) +"&playlistId=" + playlist_id + "&key=" + SIMPLE_DEVELOPER_KEY

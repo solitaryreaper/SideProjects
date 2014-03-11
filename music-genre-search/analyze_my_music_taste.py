@@ -1,5 +1,6 @@
 import pylast
-import urllib2, json, httplib2, os, json, sys
+import urllib2, json, httplib2, os, json, sys, time
+from bs4 import BeautifulSoup
 
 # LASTFM constants
 # You have to have your own unique two values for LASTFM_API_KEY and API_SECRET
@@ -24,6 +25,11 @@ MAX_RESULTS = 50
 # Freebase constants
 FREEBASE_SERVICE_URL = "https://www.googleapis.com/freebase/v1/topic"
 
+MUSIC_GENRE_CATEGORY = "music genre"
+ARTIST_CATEGORY = "artist"
+SOUNDTRACK_CATEGORY = "soundtrack"
+MUSIC_SINGLE_CATEGORY = "music single"
+
 def get_tags_for_a_song_by_artist_and_song(artist, title):
     """
         Returns all the tags for a song
@@ -45,15 +51,15 @@ def get_tags_for_a_song_by_mbid(mbid):
     """
         Returns all the tags for a song identified by a musicbrainz id
     """
-    track = network.get_track_by_mbid(mbid)
-    if track is None:
-        print "Failed to find track for mbid " + mbid
-        return None
-    else:
-        print "hello world .."
-        print str(track)
-    lastfm_tags = track.get_top_tags(limit=DEFAULT_NUMBER_TAGS_TO_FETCH)
     tags = []
+    try:
+        track = network.get_track_by_mbid(mbid)
+    except Exception, err:
+        print "Failed to finf track info for " + str(mbid)
+        return tags
+    
+    lastfm_tags = track.get_top_tags(limit=DEFAULT_NUMBER_TAGS_TO_FETCH)
+
     for tag in lastfm_tags:
         tags.append(tag.item.get_name())
         
@@ -96,43 +102,100 @@ def get_youtube_song_details(song_video_id):
     
     return topics
 
-def get_freebase_topic_details(topic_id):
-    url = FREEBASE_SERVICE_URL + topic_id + "?filter=suggest&key=" + SIMPLE_DEVELOPER_KEY
-    print "Topic Search URL : " + url
+def get_genre_details_from_topic(topic_id):
+    url = FREEBASE_SERVICE_URL + topic_id + "?key=" + SIMPLE_DEVELOPER_KEY
+    #print "Topic Search URL : " + url
     
-    genres = None
+    genres = []
     try:
         topic = json.loads(urllib2.urlopen(url).read())
-        is_music_genre = False
-        notable_topic_type_obj = topic['property']['/common/topic/notable_for']
-        notable_topic_type = notable_topic_type_obj['values'][0]['text']
-        if "musical genre" in str(notable_topic_type).lower():
-            print "Yes. Music genre !!"
-            is_music_genre = True
-        else:
-            print "No music genre !!"
-            
-        if is_music_genre:
+        category = get_topic_category(topic)
+        
+        # If freebase music category object, easy to find music genres
+        if category == MUSIC_GENRE_CATEGORY:
             raw_genres = topic['property']['/type/object/name']['values']
-            genres = [genre['text'] for genre in raw_genres]
-            print str(genres)
+            genres = [genre['text'].strip().lower() for genre in raw_genres]
+            print "Music Genre : " + str(genres)
+        else :
+            # If freebase soundtrack category, navigate using wikipedia link, to get genres using infobox
+            if '/common/topic/description' in topic['property']:
+                wiki_link = topic['property']['/common/topic/description']['values'][0]['citation']['uri'].strip()
+                genres = get_genres_for_song_from_wiki(wiki_link)
+                print "Soundtrack  : " + str(genres)
+                
+            # If musicbrain id available, fetch the tags from musicbrainz site                  
+            elif '/common/topic/topic_equivalent_webpage' in topic['property']:
+                musicbrainz_url = topic['property']['/common/topic/topic_equivalent_webpage']['values'][0]['value'] + "/tags"
+                genres = get_genres_for_song_from_musicbrainz(musicbrainz_url)
+                print "Music Single : " + str(genres)
     except Exception, err:
-        print "Failed to get genre for topic : " + topic_id
-    
-    for property in topic['property']:
-      print property + ':'
-      for value in topic['property'][property]['values']:
-        print ' - ' + value['text']
-
+        print "Failed to get genre for topic : " + topic_id + ". Reason : " + str(err)
         
     return genres
-    """
-    for property in topic['property']:
-      print property + ':'
-      for value in topic['property'][property]['values']:
-        print ' - ' + value['text']
-    """    
 
+def get_topic_category(topic):
+    """
+        Checks if this topic belongs to the following categories : Music Genre, Artist or Song
+    """
+    notable_for_obj = topic['property']['/common/topic/notable_for']
+    notable_for = notable_for_obj['values'][0]['id'].lower()
+    
+    notable_types_obj = topic['property']['/common/topic/notable_types']
+    notable_types = notable_types_obj['values'][0]['id'].lower()    
+    
+    category = None
+    if "/music/genre" in notable_for or "/music/genre" in notable_types:
+        category = MUSIC_GENRE_CATEGORY
+    elif "celebrity" in notable_types or "celebrity" in notable_for:
+        category = ARTIST_CATEGORY  
+    else:
+        category = MUSIC_SINGLE_CATEGORY          
+            
+    return category
+    
+def get_genres_for_song_from_wiki(url):
+    """
+        Get genre of a song from wiki infobox
+    """
+    genres = []
+    html = urllib2.urlopen(url).read()
+    soup = BeautifulSoup(html)
+    
+    infobox = soup.find('table', {'class' : 'infobox vevent'})
+    rows = infobox.findAll('tr')
+    for row in rows:
+        key, value = "", ""
+        try:
+            th = row.find('th', {'scope' : 'row'})
+            
+            key = th.text.strip()
+        except Exception, err:
+            continue
+        
+        if key == "Genre":
+            td = row.find('td')
+            links = td.findAll('a')
+            genres = [link.text.strip().lower() for link in links]        
+    
+    return genres
+    
+def get_genres_for_song_from_musicbrainz(url):
+    """
+        Get the tags for a song from musicbrainz
+    """
+    genres = []
+    html = urllib2.urlopen(url).read()
+    soup = BeautifulSoup(html)
+    
+    try:
+        tags = soup.find('span', {'class' : 'tags'})
+        links = tags.findAll('a')
+        genres = [link.text.strip().lower() for link in links]
+    except Exception, err:
+        print "Failed to parse html for musicbrainz URL : " + musicbrainz_url
+    
+    return genres
+    
 def parse_json(json_string):
     """
         Parses json to return a fully populated object
@@ -143,39 +206,80 @@ def parse_json(json_string):
         
     return parsed_json_object
 
-if __name__ == '__main__':
-    #get_freebase_topic_details("/m/064t9")
-#     tags = get_tags_for_a_song_by_mbid("d1e0a99e-1894-457b-ba6a-985eeef4d0c4")
-#     print str(tags)
-    
-    tags = get_tags_for_a_song_by_artist_and_song("Pharrell Williams", "Happy")
-    print str(tags)
-    
+def get_genres_from_song_topics(topics):
     """
-    youtube_playlist_id = "PLSVmge2Vrmn0sUdJzuOwD0gyn60UneQ6D"
+        Iterates through all the topics for a youtube song and determines the most apt genres for
+        the song. The preference order is as follows :
+        
+        a) If a topic corresponds directly to a music genre on freebase, return it.
+        b) If a) fails, find genres from musicbrainz or wiki link for the song.
+        c) If a) and b) both fail, get the genres of the artist in general.
+    """
+    genres = []
+    for topic in topics:
+        song_genres = get_genre_details_from_topic(topic)
+        if song_genres:
+            genres.extend(song_genres)
+
+    return genres
+
+def analyze_playlist(youtube_playlist_id):
+    """
+        Analyzes a youtube playlist and generates statistics about the song genres that I 
+        generally listen to.
+    """
     videos = get_playlist_songs(youtube_playlist_id)
     print "Found " + str(len(videos)) + " songs in the playlist : " + youtube_playlist_id
+    
     genre_stats = {}
+    songs_wo_genres = []
+    
+    total_songs = len(videos)
+    tagged_songs = 0
     for video_id in videos:
+        time.sleep(3)
+        
         topics_for_song = get_youtube_song_details(video_id)
         if topics_for_song is None:
             print "Found no topics for song : " + video_id
             continue
         
         print "Topics for song : " + video_id + " are " + str(topics_for_song)
-        
-        for topic in topics_for_song:
-            song_genres = get_freebase_topic_details(topic)
-            if song_genres is None:
-                print "Found no music genre for topic " + topic + " in freebase API."
-                continue
-            
+        song_genres = get_genres_from_song_topics(topics_for_song)
+        if not song_genres:
+            songs_wo_genres.append(video_id)
+            print "Found no music genre for song " + str(video_id)
+        else:
+            tagged_songs = tagged_songs + 1
             for genre in song_genres:
                 genre_cnt = 1
                 if genre in genre_stats.keys():
                     genre_cnt = genre_cnt + genre_stats.get(genre)
 
-                genre_stats[genre] = genre_cnt
-                
+                genre_stats[genre] = genre_cnt            
+        
     print "Genre stats : " + str(genre_stats)
+    print "#Total songs : " + str(total_songs) + ", #Tagged songs : " + str(tagged_songs)
+    print "Songs without genre : " + str(songs_wo_genres)
+        
+def test():
     """
+    genres = get_genres_from_wiki("http://en.wikipedia.org/wiki/index.html?curid=30960173")
+    print str(genres)
+    """
+    #get_genre_details_from_topic("/m/0nl_s1y")
+    
+    #tags = get_tags_for_a_song_by_mbid("61bf0388-b8a9-48f4-81d1-7eb02706dfb0")    
+    #tags = get_tags_for_a_song_by_mbid("574eafc0-6909-4278-94fa-083ea5aefc61")
+    #tags = get_tags_for_a_song_by_artist_and_song("Cher", "Believe")
+    #print str(tags)
+    
+    #genres = get_genres_for_song_from_musicbrainz("http://musicbrainz.org/recording/574eafc0-6909-4278-94fa-083ea5aefc61/tags")
+    #print str(genres)
+    
+    genres= get_genre_details_from_topic("/m/026smdk")
+    print str(genres)
+        
+if __name__ == '__main__':
+    #analyze_playlist("PLBC9DCE48EF03B283")
+    test()
