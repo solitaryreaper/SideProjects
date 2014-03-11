@@ -175,11 +175,11 @@ def get_genres_for_song_from_wiki(url):
         if "Genre" in key:
             td = row.find('td')
             links = td.findAll('a')
-            # Hack : Really need to learn regex well soon !!
+            # Hack : Really need to learn regex well soon !! Some genre infobox text had special characters ..
             genres = [link.text.strip().lower() for link in links if len(link.text.strip().lower().replace("[", "").replace("]", "")) > 2]
             
             # Sometimes the genres don't have hyperlinks
-            #Hack : Really need to learn regex well soon !!
+            #Hack : Really need to learn regex well soon !! Some genre infobox text had newline characters ..
             genre_string = td.text.strip().replace("\n", ",").replace("[1][2][3]", "")
             other_genres = [genre.strip().lower() for genre in genre_string.split(",") if len(genre.strip().lower()) > 2]
             
