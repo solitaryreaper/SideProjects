@@ -1,21 +1,5 @@
-import pylast
 import urllib2, json, httplib2, os, json, sys, time, re
 from bs4 import BeautifulSoup
-
-# LASTFM constants
-# You have to have your own unique two values for LASTFM_API_KEY and API_SECRET
-# Obtain yours from http://www.last.fm/api/account for Last.fm
-LASTFM_API_KEY = "a64ca166070edab69dd19cd8e1b3c712" # this is a sample key
-LASTFM_API_SECRET = "535a2d4b82929b949b2ac3e439e3cb78"
-
-# In order to perform a write operation you need to authenticate yourself
-LASTFM_USERNAME = "invinc4u"
-LASTFM_PASSWORD_HASH = pylast.md5("Invinc4u71#")
-
-network = pylast.LastFMNetwork(api_key = LASTFM_API_KEY, api_secret = 
-    LASTFM_API_SECRET, username = LASTFM_USERNAME, password_hash = LASTFM_PASSWORD_HASH)
-
-DEFAULT_NUMBER_TAGS_TO_FETCH = 3
 
 # Youtube Constants
 SIMPLE_DEVELOPER_KEY = "AIzaSyB7J0D2jG5kVTRPxjT2yGzH6WOE8SCvrXs"
@@ -29,41 +13,6 @@ MUSIC_GENRE_CATEGORY = "music genre"
 ARTIST_CATEGORY = "artist"
 SOUNDTRACK_CATEGORY = "soundtrack"
 MUSIC_SINGLE_CATEGORY = "music single"
-
-def get_tags_for_a_song_by_artist_and_song(artist, title):
-    """
-        Returns all the tags for a song
-    """
-    track = network.get_track(artist, title)
-    if track is None:
-        print "Failed to find track for artist " + artist + ", song " + song
-        return None
-    else:
-        print str(track)
-    lastfm_tags = track.get_top_tags(limit=DEFAULT_NUMBER_TAGS_TO_FETCH)
-    tags = []
-    for tag in lastfm_tags:
-        tags.append(tag.item.get_name())
-        
-    return tags
-
-def get_tags_for_a_song_by_mbid(mbid):
-    """
-        Returns all the tags for a song identified by a musicbrainz id
-    """
-    tags = []
-    try:
-        track = network.get_track_by_mbid(mbid)
-    except Exception, err:
-        print "Failed to finf track info for " + str(mbid)
-        return tags
-    
-    lastfm_tags = track.get_top_tags(limit=DEFAULT_NUMBER_TAGS_TO_FETCH)
-
-    for tag in lastfm_tags:
-        tags.append(tag.item.get_name())
-        
-    return tags
 
 def get_playlist_songs(playlist_id):
     """
@@ -218,11 +167,7 @@ def parse_json(json_string):
 def get_genres_from_song_topics(topics):
     """
         Iterates through all the topics for a youtube song and determines the most apt genres for
-        the song. The preference order is as follows :
-        
-        a) If a topic corresponds directly to a music genre on freebase, return it.
-        b) If a) fails, find genres from musicbrainz or wiki link for the song.
-        c) If a) and b) both fail, get the genres of the artist in general.
+        the song. 
     """
     genres = []
     for topic in topics:
