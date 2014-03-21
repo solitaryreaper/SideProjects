@@ -54,11 +54,14 @@ if __name__ == '__main__':
         urls = f.readlines()
         
     archived_content_map = find_sites_with_archived_content(urls)
+    print "Found " + str(len(archived_content_map)) + " archived URLS out of total " + str(len(urls)) + " URLS .."
     
     out = open(output_file, 'w')
-    out.write("URL,Latest Snapshot URL")
+    out.write("URL,Latest Snapshot URL\n")
     for url, snapshot_url in archived_content_map.iteritems():
         print "URL : " + url + " , Snapshot URL : " + snapshot_url
         out_line = url.strip() + "," + snapshot_url.strip() + "\n" 
         out.write(out_line)
     out.close()
+    
+    
