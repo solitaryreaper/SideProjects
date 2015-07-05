@@ -2,3 +2,4 @@
 .pydevproject
 *.json
 .settings/
+.idea/
